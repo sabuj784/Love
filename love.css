@@ -1,0 +1,123 @@
+html {
+    height: 100%;
+  }
+  body {
+    background: linear-gradient(117deg, #ff41f7 0%, rgba(255, 73, 73, 0.81) 100%);
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .btn {
+    color: gray;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    width: 200px;
+    height: 50px;
+    margin: 25px 10px;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: #ff4690;
+    border: 2px solid white;
+  }
+  @media (max-width: 1148px) {
+    h1 {
+      font-size: 50px;
+    }
+    .btn {
+      width: 150px;
+      height: 40px;
+    }
+  }
+  @media (max-width: 795px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+/* Ensure the showMessage div is hidden initially */
+#showMessage {
+  display: none;
+  text-align: center;
+}
+
+#showMessage h1 {
+  font-size: 50px;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Typing Effect for "I Love you!" */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  border-right: 2px solid;
+  white-space: nowrap;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 48px;
+  color: white;
+  overflow: hidden;
+  animation: typing 4s steps(12, end), blink-caret 0.75s step-end infinite;
+}
+
+.colorful-text {
+  animation: color-change 4s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #ff4e50; }
+  25% { color: #fc913a; }
+  50% { color: #f9d62e; }
+  75% { color: #9de0ad; }
+  100% { color: #45ada8; }
+}
+
+/* Message Style */
+.message {
+  font-size: 24px;
+  color: white;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+footer {
+    color: #fff;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+  #nextProjectBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#nextProjectBtn:hover {
+    background-color: #e14d43;
+    transform: scale(1.05);
+}

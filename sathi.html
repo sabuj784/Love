@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pure CSS 3D Image Slideshow</title>
+    <link rel="stylesheet" href="sathi.css">
+</head>
+<body>
+    <header class="animated-header">
+        <h1>Love Gallery</h1>
+    </header>
+    <section>
+        <div class="slideShow">
+            <div class="content">
+                <figure><img src="WhatsApp Image 2024-08-21 at 09.26.04_587c764f.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="WhatsApp Image 2024-08-21 at 09.26.06_82b736f2.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="WhatsApp Image 2024-08-21 at 09.26.05_c1057d2b.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="LOVE.jpeg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="WhatsApp Image 2024-08-21 at 10.35.12_a2666d48.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="IMG-20240812-WA0002.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="IMG-20240812-WA0001 copy.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="WhatsApp Image 2024-08-21 at 10.35.12_c1d8261b.jpg" onclick="showFullScreen(this)"></figure>
+                <figure><img src="heart.png" onclick="showFullScreen(this)"></figure>
+            </div>
+        </div>
+    </section>
+
+    <div id="fullScreenContainer" class="full-screen" onclick="hideFullScreen()">
+        <span class="close">&times;</span>
+        <img id="fullScreenImage" src="" alt="Full Screen Image">
+    </div>
+
+    <script>
+        function showFullScreen(imgElement) {
+            const fullScreenContainer = document.getElementById('fullScreenContainer');
+            const fullScreenImage = document.getElementById('fullScreenImage');
+            fullScreenImage.src = imgElement.src;
+            fullScreenContainer.style.display = 'flex';
+            document.querySelector('.slideShow').style.animationPlayState = 'paused';
+        }
+
+        function hideFullScreen() {
+            const fullScreenContainer = document.getElementById('fullScreenContainer');
+            fullScreenContainer.style.display = 'none';
+            document.querySelector('.slideShow').style.animationPlayState = 'running';
+        }
+    </script>
+</body>
+</html>
